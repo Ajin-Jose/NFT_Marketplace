@@ -17,20 +17,20 @@ const customChain = {
   // Information about the chain's native currency (i.e. the currency that is used to pay for gas)
   nativeCurrency: {
     decimals: 18,
-    name: "Consensys ETH",
+    name: "MATIC",
     symbol: "MATIC",
   },
   shortName: "amoy", // Display value shown in the wallet UI
-  slug: "consensys", // Display value shown in the wallet UI
+  slug: "amoy", // Display value shown in the wallet UI
   testnet: true, // Boolean indicating whether the chain is a testnet or mainnet
-  chain: "ConsenSys", // Name of the network
-  name: "ConsenSys zkEVM Testnet", // Name of the network
+  chain: "EVM", // Name of the network
+  name: "Polygon Amoy", // Name of the network
 };
 
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider activeChain={customChain}>
+    <ThirdwebProvider clientId="2225c0191997baa814acd65aa79485ee" activeChain={customChain}>
       <ChakraProvider>
         <Navbar />
         <Component {...pageProps} />
